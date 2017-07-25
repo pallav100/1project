@@ -1,0 +1,66 @@
+<html>
+<head>
+	<title>walk</title>
+<script type="text/javascript" src="C:\Users\Kalpesh Soni\Desktop\New folder\vivus.js"></script>
+<script type="text/javascript" src="https://raw.githubusercontent.com/maxwellito/vivus/master/dist/vivus.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.3.2/vivus.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script type="text/javascript" src="http://beneposto.pl/jqueryrotate/js/jQueryRotateCompressed.js"></script>
+</head>
+<body>
+
+	<style type="text/css">
+		#hii{
+			background:url("C:/Users/Kalpesh Soni/Desktop/New folder/walkk.png");
+			width: 118;
+			height: 236px;
+			position: fixed;
+	left:20%;
+	top:32%;
+	z-index: 2;
+			-webkit-animation: walk-east 2.0s steps(8) infinite;
+		}
+
+			@-webkit-keyframes walk-east {
+				from{background-position: 0px;}
+                  to{background-position: -960px;}}
+
+	</style>
+<div id="hii"></div>
+<script type="text/javascript">
+	$(document).ready(function() {
+   $("#hii").delay(000).animate({
+        left: '+=40%'
+    }, 8800);
+$("#a").delay(000).animate({
+        left: '-=40%'
+    }, 18000);});
+</script>
+<script type="text/javascript">  function move(){  $("#hii").css("-webkit-animation-play-state", "paused")}
+
+    $(document).ready(function(){
+    	setTimout( move, 2000);})
+    
+</script>   
+<div id="a"><img src="C:/Users/Kalpesh Soni/Desktop/New folder/b2.png"><style type="text/css">
+	#a{
+		background: url("C:/Users/Kalpesh Soni/Desktop/New folder/bk.png");
+		position: fixed;
+		left:0%;
+		top:20%;
+z-index: 1	}
+</style></div>
+</body>
+</html>
+

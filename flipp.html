@@ -1,0 +1,129 @@
+
+<html>
+<head>
+<style type="text/css">.flipWrapper {
+
+-webkit-perspective: 1000;
+03
+width: 400px;
+04
+height: 200px;
+05
+position: relative;
+06
+margin: 50px auto;
+07
+}
+08
+.flipWrapper .card.flipped {
+09
+-webkit-transform: rotatey(180deg);
+10
+}
+11
+.flipWrapper .card {
+12
+width: 100%;
+13
+height: 100%;
+14
+-webkit-transform-style: preserve-3d;
+15
+-webkit-transition: 0.5s;
+16
+}
+17
+.flipWrapper .card .face {
+18
+width: 100%;
+19
+height: 100%;
+20
+position: absolute;
+21
+-webkit-backface-visibility: hidden;
+22
+z-index: 2;
+23
+font-family: Georgia;
+24
+font-size: 3em;
+25
+text-align: center;
+26
+line-height: 200px;
+27
+}
+28
+.flipWrapper .card .front {
+29
+position: absolute;
+30
+z-index: 1;
+31
+background: rgb(57, 171, 62);
+32
+color: white;
+33
+cursor: pointer;
+34
+border-radius: 10px;
+35
+}
+36
+.flipWrapper .card .back {
+37
+-webkit-transform: rotatey(-180deg);
+38
+background: blue;
+39
+background: red;
+40
+color: white;
+41
+cursor: pointer;
+
+border-radius: 10px;
+
+}</style>
+
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<script type="text/javascript" src="C:\Users\Kalpesh Soni\Desktop\New folder\script.js">$(document).ready(function () {
+
+    $('.flipWrapper').click(function () {
+
+        $(this).find('.card').toggleClass('flipped');
+
+        return false;
+
+    });
+
+});</script>
+
+</head>
+<body>
+<div class="flipWrapper">
+
+<div class="card">
+
+<div class="face front">
+
+Front Content
+
+</div>
+
+<div class="face back">
+
+Back Content
+
+</div>
+
+</div>
+
+</div>
+</body></html>

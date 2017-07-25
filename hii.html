@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="main.css">
+
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+<style type="text/css">
+	@-webkit-keyframes mynewmove {
+  from {left: 0px;}
+    to {left:-700px;}
+
+
+}
+
+
+@keyframes mynewmove {
+    from {left: 0px;}
+    to {left:-700px;}
+}
+          	@-webkit-keyframes mynewmove2 {
+            from {right: 0px;}
+           to {right:-700px;}
+
+
+                    }
+
+
+            @keyframes mynewmove2 {
+            from {right: 0px;}
+              to {right:-700px;}
+                }
+
+                .clock{  
+  background: white;
+  position: absolute;
+  left: 40%;
+  height: 6vw;
+  width: 6vw;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;/*
+  margin: auto;*/
+  box-shadow: inset 0 0 0 .25rem #aaa;
+  flex-direction: column;
+  animation: clock 10s ease-in-out infinite;
+}
+
+.cup{
+  background: #aaa; 
+  height: 30%;
+  width: 30%;
+  border-radius: 50% 50% 0 0/ 100% 100% 0 0;
+  overflow: hidden;
+}
+
+.top{
+  transform: rotate(180deg)  ;
+}
+
+.sand{
+  background: #555;
+  height: 150%;
+  width: 150%;
+  transform-origin: 0% 0%;
+  animation: sand 10s linear infinite -5s;
+}
+
+.delayed{
+  animation-delay: 0s; 
+}
+
+
+@keyframes clock{
+  0%{
+    transform: rotate(0deg)
+  }
+  25%,50%{
+    transform: rotate(180deg)
+  }
+  75%{
+    transform: rotate(360deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes sand{
+  0%,100%{
+    border-radius: 5%;
+    transform: translate(35%,20%) rotate(45deg);
+  }
+  15%{
+    border-radius:40%;
+    transform: translate(0%,35%) rotate(-65deg) scale(1.5,1.5);
+  }
+  25%{
+    border-radius:20%;
+    transform: translate(-15%,35%) rotate(-90deg) scale(1.2,1.2);
+  }
+  50%{
+    border-radius:5%;
+    transform: translate(0%,0%) rotate(-90deg) scale(1,1);
+    opacity: 1;
+  }
+  50.01%,64.99%{
+    opacity: 0;
+  }
+  65%{
+    border-radius:35%;
+    transform: translate(20%,50%) rotate(30deg);
+    opacity: 1;    
+  }
+  75%{
+    border-radius:10%;
+    transform: translate(35%,40%) rotate(45deg);
+  }
+}
+
+
+
+</style>
+	<title>my unique page</title>
+
+	
+
+	
+	<script>
+    
+     
+  $(document).ready(function(){
+    setTimeout(function() {
+    
+
+
+          
+
+
+ // function fun() { setTimeout(function(){
+   document.getElementById("loading").style.opacity='0'; 
+       document.getElementById("section-left").style.WebkitAnimation = "mynewmove 1s 1 0.5s";
+           document.getElementById("section-right").style.WebkitAnimation = "mynewmove2 1s 1 0.5s";
+ 
+  setTimeout(function(){window.location.href='page2.html'},1400);    
+  
+    
+},9800);});
+	
+	</script>
+		
+           
+
+
+
+
+
+
+	</head>
+	
+<body>
+
+<div id="start" onclick ="setTimeout(fun,2000); " >
+<div id="section-left" style="position: fixed;
+  top:0;
+  width: 51%;
+  height: 100%;
+  left:0;
+  z-index: 998;
+  background-color:#404040">
+		
+	</div>
+	
+
+	<div id="section-right" style="position: fixed;
+  top:0;
+  width: 51%;
+  height: 100%;
+  right:0; z-index: 998;background-color: #404040
+ ;"></div>
+	
+	
+<div id="loading">
+
+	
+
+           <div id="demo" style="position:fixed;font-weight: bold;font-size: 100%;margin-top: 22.7vw;margin-left: 46vw;color: white;z-index: 2000"> 
+
+           <div class="clock">
+  <div class="cup top">
+    <div class="sand"></div>
+  </div>
+  <div class="cup">
+    <div class="sand delayed"></div>
+  </div>
+</div>
+
+   <!--   <script>
+     
+      var arr = ["WEL", "COME","TO","ANC","ON","HAND","!","!!!!","!!!!!!"];
+// Set the date we're counting down to
+       var i=0;
+
+// Update the count down every 1 second
+     var x = setInterval(function() {
+
+     // Get todays date and time
+      var now = arr[i];
+    
+      i++;
+    
+   
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = now;
+    
+    // If the count down is over, write some text 
+    if (i>8)
+    {i=0};
+
+     }, 1000);
+      </script> --></div>
+	
+
+	
+	<div id="loader-wrapper">
+	<div id="loader">
+		
+	</div>
+		
+	</div>
+	
+	</div>
+	
+	
+	</div>
+
+
+</script>
+</div>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
